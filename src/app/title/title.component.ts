@@ -1,16 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-title',
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.css']
 })
-export class TitleComponent implements OnInit{
+export class TitleComponent implements OnInit, OnChanges{
  
-  constructor(){}
-  
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  @Input() public title:String = "Primeiro Projeto"
 
+  constructor(){ }
+  
+  ngOnInit(): void { }
+  
+  ngOnChanges(): void { 
+    console.log("Informação alterada com sucesso!")
+  }
 }
