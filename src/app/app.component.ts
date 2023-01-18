@@ -3,13 +3,16 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
+  
   <app-title title="Bem-Vindo" *ngIf="destroy"></app-title>
   {{valor}}
   <button (click)="adicionarNumber()">Adiciona Número</button>
   <br>
   <br>
   <button (click)="destroyTitle()">Destruir Titulo</button>
-  <router-outlet></router-outlet>`
+  <router-outlet></router-outlet>
+  <app-data-biding></app-data-biding>
+  `
 })
 
 
